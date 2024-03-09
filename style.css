@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,600&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+/* root ini berguna untuk membuat variable */
+:root{
+    --main-color: #436850;
+}
+
+.container{
+    max-width: 1200px;
+    max-height: 90%;
+    margin: 0 auto;
+}
+
+.section-padding{
+
+}
+
+
+/* Navbar */
+.navbar{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: var(--main-color);
+    padding: 8px 30px;
+}
+
+.navbar .item{
+    display: flex;
+    gap: 40px;
+}
+
+.navbar .item a{
+    color: white;
+    font-size: 16px;
+    font-weight: 500px;
+    transition-duration: 150ms;
+}
+
+.navbar .item a:hover{
+    opacity: 0.5;
+}
+
+/* bagian home */
+.container-home, .container-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container-home .home-text h3, .container-about .about-text h3{
+    font-size: 44px;
+    font-weight: 700;
+}
+
+.container-home .home-text p, .container-about .about-text p{
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+.container-home .home-text a{
+ font-size: 16px;
+ font-weight: 600;
+ color: white;
+ padding: 14px 14px;
+ background-color: var(--main-color);
+ border-radius: 8px;
+ transition-duration: 300ms;
+}
+
+.container-home .home-text a:hover{
+    opacity: 0.5;
+}
+
+/* bagian card */
+
+.card-text{
+    text-align: center;
+}
+
+.card-text h3{
+    font-size: 18px;
+}
+
+.card-text p{
+    color: gray;
+    font-size: 10px ;
+}
+
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(250, 253, 255, 0.7);
+    margin-top: 30px;
+    /* width: 1058px;
+    height: 429px; */
+
+}
+
+.card{
+    width: 336px;
+    height: 429px;
+    padding: 45px 33px;
+    border-radius: 20px;
+    gap: 20px;
+    text-align: center;
+    box-shadow: -5px 5px 10px 10px rgba(46, 46, 46, 0.1);
+
+}
+
+.card a{
+    display: block;
+    color: white;
+    padding: 10px 10px;
+    background-color: var(--main-color);
+    margin-top: 29px;
+    border-radius: 7px;
+    transition-duration: 300ms;
+}
+
+.card p{
+display: block;
+margin-top: 15px;
+}
+
+.card-container .card a:hover{
+    opacity: 0.5;
+}
+
+/* bagian footer */
+
+.pembungkus-footer{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin-top: 40px;
+    color: white;
+    height: 200px;
+    padding-top: 40px;
+}
+
+
+.pembungkus-footer .segmen1 p{
+    margin-left: 23px;
+    font-size: 10px;
+}
+
+.pembungkus-footer .segmen1-2{
+    display: flex;
+}
+
+.pembungkus-footer .segmen2, .segmen3{
+    margin-top: 10px;
+    margin-right: 50px;
+}
+.pembungkus-footer .segmen2 p{
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.pembungkus-footer .segmen2 ul li {
+    font-size: 13px;
+}
+
+.pembungkus-footer .segmen3 h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.pembungkus-footer .segmen3 p, a{
+    font-size: 13px;
+}
+
+.pembungkus-footer .segmen4 h2{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.pembungkus-footer .segmen4{
+    padding-top: 10px;
+    margin-right: 100px;
+}
+
+.pembungkus-footer .segmen4 .segmen4-1 img{
+    margin-right: 6px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* respomsive */
+@media (max-width: 576px){
+    .navbar{
+        height: 90px;
+    }
+    .navbar, .container-home, .container-about{
+        flex-direction: column;
+    }
+
+    .container-home{
+        flex-direction: column;
+    }
+
+    .container-home .home-text{
+        order: 2;
+    }
+
+    .container-home .home-img{
+        order : 1;
+    }
+
+    .container-home .home-text h3{
+        font-size: 32px;
+    }
+
+    .container-home .home-text p{
+        font-size: 16px;
+    }
+
+    .container-home .home-text a{
+        padding: 14px 15px;
+    }
+
+    .card-container{
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pembungkus-footer, .segmen1-2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pembungkus-footer{
+        min-height: 500px;
+        justify-content: start;
+    }
+
+
+    .pembungkus-footer .segmen1{
+        margin-right: 30px;
+    }
+    
+    .pembungkus-footer .segmen1-2{
+        margin-top: 20px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen2 ul li{
+        text-align: center;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen3{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4{
+        margin-top: 25px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4 h2{
+        margin-left: 75px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4 .segmen4-1{
+       margin-left: 55px;
+    }
+
+   
+
+
+}
+
+/* untuk tablet */
+
+@media (max-width: 1024px) {
+    
+    .navbar{
+        height: 90px;
+    }
+    .navbar, .container-home, .container-about{
+        flex-direction: column;
+    }
+
+    .container-home{
+        flex-direction: column;
+    }
+
+    .container-home .home-text{
+        order: 2;
+    }
+
+    .container-home .home-img{
+        order : 1;
+    }
+
+    .container-home .home-text h3{
+        font-size: 32px;
+    }
+
+    .container-home .home-text p{
+        font-size: 16px;
+    }
+
+    .container-home .home-text a{
+        padding: 14px 15px;
+    }
+
+    .card-container{
+        align-items: center;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .pembungkus-footer, .segmen1-2{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pembungkus-footer{
+        min-height: 500px;
+        justify-content: start;
+    }
+
+
+    .pembungkus-footer .segmen1{
+        margin-right: 30px;
+    }
+    
+    .pembungkus-footer .segmen1-2{
+        margin-top: 20px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen2 ul li{
+        text-align: center;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen3{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4{
+        margin-top: 25px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4 h2{
+        margin-left: 75px;
+    }
+
+    .pembungkus-footer .segmen1-2 .segmen4 .segmen4-1{
+       margin-left: 55px;
+    }
+
+   
+
+
+}
